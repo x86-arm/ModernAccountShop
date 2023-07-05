@@ -9,7 +9,7 @@ const typographyVariants = cva(
   {
     variants: {
       variant: {
-        p: "leading-7 [&:not(:first-child)]:mt-6",
+        p: "leading-7",
         h1: "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
         h2: "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0",
         h3: "scroll-m-20 text-2xl font-semibold tracking-tight",
@@ -35,7 +35,7 @@ export interface TypographyProps
   extends VariantProps<typeof typographyVariants> {
   children?: React.ReactNode;
   className?: string;
-  component?: "p" | "h1" | "h2" | "h3" | "h4" | "code" | "blockquote" | "a";
+  component?: keyof JSX.IntrinsicElements;
 }
 
 export default function Typography({

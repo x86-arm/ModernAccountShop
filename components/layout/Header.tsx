@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import ThemeToggle from "../ThemeToggle";
@@ -15,8 +13,14 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { useLocale, useTranslations } from "next-intl";
+import LanguageChange from "../LanguageChange";
 
 export default function Header() {
+  const t = useTranslations();
+
+  const locale = useLocale();
+
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur">
       <div className="w-full mx-auto px-8 flex h-14 items-center">
@@ -43,12 +47,13 @@ export default function Header() {
           <HeaderNavLinks />
         </div>
         <div className="flex flex-1 items-center space-x-2 justify-end">
+          <LanguageChange locale={locale} />
           <ThemeToggle />
           <Link
             href="/login"
             className={buttonVariants({ variant: "outline" })}
           >
-            Login / Signup
+            {t("loginSignup")}
           </Link>
         </div>
       </div>
