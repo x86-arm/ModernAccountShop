@@ -25,7 +25,7 @@ export default function AccountCategory({
       </Typography>
       <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-5 mt-6">
         {items.map((item: any, index: number) => (
-          <Card className="">
+          <Card className="" key={index}>
             <CardHeader>
               <CardTitle>{item.title}</CardTitle>
               <CardDescription>Tai khoan hien co: 100,000</CardDescription>
