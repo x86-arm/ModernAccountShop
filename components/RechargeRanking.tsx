@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { BarChartBig, Crown, Hexagon, Star } from "lucide-react";
+import { BarChartBig, Crown, Hexagon } from "lucide-react";
 import Typography from "./ui/typography";
 import { useTranslations } from "next-intl";
 
@@ -57,7 +57,10 @@ export default function TopRecharge() {
                 <div className="relative flex justify-center items-center cursor-default">
                   <Hexagon />
                   <div className="absolute flex justify-center items-center">
-                    <Typography variant={"p"} className="font-semibold">
+                    <Typography
+                      variant={"p"}
+                      className="font-semibold select-none"
+                    >
                       {index + 1}
                     </Typography>
                   </div>

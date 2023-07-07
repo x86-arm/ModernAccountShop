@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Globe2, Moon, Sun } from "lucide-react";
+import { Globe2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
